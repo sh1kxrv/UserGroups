@@ -11,7 +11,14 @@ namespace UserGroups.Code.Company
         DefaultProduct,
         EatableProduct
     }
-    public class Product
+    public class BaseProduct
+    {
+        public string Name { get; set; }
+        public double Price { get; set; }
+        public int Count { get; set; }
+        public ProductType Type { get; set; }
+    }
+    public class Product : BaseProduct
     {
         public Product(string Name, double Price, int Count, int Index, ProductType type)
         {
@@ -23,10 +30,6 @@ namespace UserGroups.Code.Company
             this.AddingTime = DateTime.Now;
             AllChanges = new List<Changes>();
         }
-        public ProductType Type { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public int Count { get; set; }
         public int Index { get; set; }
         public List<Changes> AllChanges { get; set; }
         public DateTime AddingTime { get; set; }
@@ -38,7 +41,7 @@ namespace UserGroups.Code.Company
             this.Change = change;
             ChangeTime = DateTime.Now;
         }
-        public DateTime ChangeTime;
+        public DateTime ChangeTime { get; }
         public string Change { get; set; }
     }
 }

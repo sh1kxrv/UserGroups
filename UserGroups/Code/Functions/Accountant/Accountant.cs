@@ -70,15 +70,15 @@ namespace UserGroups.Code.Functions.Accountant
                 if (toRef.Refunded)
                     continue;
                 toRef.Refunded = true;
-                refund += toRef.ToRefund;
+                refund += toRef.Price;
             }
             foreach (var sal in Controller.OwnCompany.SaledProducts)
             {
                 if (sal.Saled)
                     continue;
                 sal.Saled = true;
-                saledWithNDS += sal.Revenue - sal.Revenue * ((sal.type == ProductType.DefaultProduct ? 20.0 : 10.0) / 100);
-                saled += sal.Revenue;
+                saledWithNDS += sal.Price - sal.Price * ((sal.Type == ProductType.DefaultProduct ? 20.0 : 10.0) / 100);
+                saled += sal.Price;
             }
             Controller.OwnCompany.AmountOfMoney -= refund;
             Controller.OwnCompany.AmountOfMoney += saledWithNDS;
