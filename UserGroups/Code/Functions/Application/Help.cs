@@ -23,6 +23,7 @@ namespace UserGroups.Code.Functions.Application
             NotifyIO.PrintLn("Команды:");
             LevelAccess access = Controller.AuthedAs.Access;
             NotifyIO.PrintLn(CommandNotifier(access));
+
             foreach (var func in Controller.CurrentFunctions)
             {
                 if(access != func.CmdLvl)

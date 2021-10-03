@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,17 +54,17 @@
     <Compile Include="Code\Company\SaledProduct.cs" />
     <Compile Include="Code\Controller.cs" />
     <Compile Include="Code\FileSystem\FileController.cs" />
-    <Compile Include="Code\Functions\Accountant\Accountant.cs" />
-    <Compile Include="Code\Functions\Administator\AdminFunctions.cs" />
+    <Compile Include="Code\Functions\Accountant.cs" />
+    <Compile Include="Code\Functions\AdminFunctions.cs" />
     <Compile Include="Code\Functions\Application\ChangeUser.cs" />
     <Compile Include="Code\Functions\Application\Clear.cs" />
     <Compile Include="Code\Functions\Application\CompanyMoney.cs" />
     <Compile Include="Code\Functions\Application\Help.cs" />
     <Compile Include="Code\Functions\Application\StaffList.cs" />
-    <Compile Include="Code\Functions\HRD\HRD.cs" />
-    <Compile Include="Code\Functions\Paymaster\Paymaster.cs" />
+    <Compile Include="Code\Functions\HRD.cs" />
+    <Compile Include="Code\Functions\Paymaster.cs" />
     <Compile Include="Code\Company\Product.cs" />
-    <Compile Include="Code\Functions\Storage\Storage.cs" />
+    <Compile Include="Code\Functions\Storage.cs" />
     <Compile Include="Code\IO\Args\ArgsController.cs" />
     <Compile Include="Code\IO\Args\ArgsTemplate.cs" />
     <Compile Include="Code\IO\ConsoleManipulator.cs" />

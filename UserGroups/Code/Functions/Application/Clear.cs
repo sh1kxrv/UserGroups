@@ -38,10 +38,12 @@ namespace UserGroups.Code.Functions.Application
         {
             Controller.Staff.Clear();
             Controller.OwnCompany.AmountOfMoney = 50_000_000;
+
             Controller.OwnCompany.Infos.Clear();
             Controller.OwnCompany.Products.Clear();
             Controller.OwnCompany.RefundedProducts.Clear();
             Controller.OwnCompany.SaledProducts.Clear();
+
             Controller.FileController.SaveCompany();
             Controller.FileController.SaveStaff();
         }

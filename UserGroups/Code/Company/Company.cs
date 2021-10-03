@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using UserGroups.Code.Functions.Storage;
 using UserGroups.Code.User.Custom;
 
 namespace UserGroups.Code.Company
@@ -64,12 +63,9 @@ namespace UserGroups.Code.Company
             if(HasProduct(prodName))
             {
                 Product already = GetProductByName(prodName);
-                if (already.Count == 0)
-                    return;
-                if (count >= already.Count)
-                    already.Count = 0;
-                else
-                    already.Count -= count;
+                if (already.Count == 0) return;
+                else if (count >= already.Count) already.Count = 0;
+                else already.Count -= count;
 
                 already.AllChanges.Add(new Changes($"Списание товара -> -{count}шт. | Остаток - {already.Count}шт | {reason}"));
             }

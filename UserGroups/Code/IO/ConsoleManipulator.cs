@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace UserGroups.Code.IO
 {
@@ -33,10 +29,8 @@ namespace UserGroups.Code.IO
         }
         public void UpdateTitleStatus()
         {
-            if(Controller.AuthedAs == null)
-                Console.Title = "Не авторизован | User Groups Manager v3.2";
-            else
-                Console.Title = $"Авторизован как '{Controller.AuthedAs.Name}' | User Groups Manager v3.2";
+            if(Controller.AuthedAs == null) Console.Title = "Не авторизован | User Groups Manager v3.2";
+            else Console.Title = $"Авторизован как '{Controller.AuthedAs.Name}' | User Groups Manager v3.2";
         }
         public string GetInputByUser()
         {
